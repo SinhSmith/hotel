@@ -1,0 +1,134 @@
+﻿@using PagedList.Mvc
+@using PagedList;
+@{
+    ViewBag.Title = "Tìm kiếm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IPagedList<Portal.Model.ViewModel.SearchResultViewModel>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb"><span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="~/Home/Index"><i class="glyphicon glyphicon-home"></i> Trang chủ</a></span> / <span class="current">Tìm kiếm @ViewBag.SearchString</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="project">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+
+                <div class="title os-tuyendart w3danima">
+                    <div class="fleft">
+                        <h3 style="color:#062245;">Tìm kiếm</h3>
+                    </div>
+                    <br clear="all">
+                </div>
+                <div class="row mgb10">
+                    @foreach (Portal.Model.ViewModel.SearchResultViewModel item in Model)
+                    {
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 list-bat-dong-san">
+                            <a class="post-thumbnail image-link" style="display:block;height:240px" href=@item.Path>
+                                <img src=@item.ImagePath class="img-responsive" alt=@item.Title>
+                            </a>
+                            <br clear="all">
+                            <a class="" href=@item.Path style="font-size:16px; font-weight:bold;display:block;height:40px;">@item.Title</a>
+                        </div>
+                    }
+                </div>
+                <div id="pagination">
+                    @Html.PagedListPager(Model, page => Url.Action("Search", "Home", new {keyword = Request.QueryString["keyword"], page }))
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+
+                <br clear="all">
+                <div class="box sub-right">
+                    <div class="title title-bg os-tuyendart w3danima">
+                        <h3>Thông tin dự án</h3>
+                    </div>
+                    @foreach (var project in ViewBag.FeaturedProjects)
+                {
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="~/Project/ProjectDetails/@project.Id">
+                                    <img class="media-object" src=@project.CoverImage.ImagePath alt=@project.Name>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <a href="~/Project/ProjectDetails/@project.Id">@project.Name</a>
+                                <p></p><p>@project.Address</p><p></p>
+                            </div>
+                        </div>
+                }
+                </div>
+                <br clear="all">
+                <div class="title3 os-tuyendart w3danima">
+                    <div class="fleft">
+                        <h3 style="color:#062245;">Tin thị trường</h3>
+                    </div>
+                    <br clear="all">
+                </div>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="http://www.coteccons.vn/coteccons-du-kien-chon-dau-tu-mot-so-can-ho-panorama-nha-trang/">
+                            <img class="media-object" src="./Kết quả tìm kiếm cho “a” – Coteccons_files/ctc-panorama-nhatrang-h4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="http://www.coteccons.vn/coteccons-du-kien-chon-dau-tu-mot-so-can-ho-panorama-nha-trang/">Coteccons dự kiến chọn đầu tư một số căn hộ Panorama Nha Trang</a>
+                    </div>
+                </div><div class="media">
+                    <div class="media-left">
+                        <a href="http://www.coteccons.vn/tnr-holdings-viet-nam-va-moi-duyen-voi-cac-giai-thuong/">
+                            <img class="media-object" src="./Kết quả tìm kiếm cho “a” – Coteccons_files/20160622081135-943d.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="http://www.coteccons.vn/tnr-holdings-viet-nam-va-moi-duyen-voi-cac-giai-thuong/">TNR Holdings Việt Nam và mối “duyên” với các giải thưởng</a>
+                    </div>
+                </div><div class="media">
+                    <div class="media-left">
+                        <a href="http://www.coteccons.vn/doanh-nghiep-viet-thang-thau-nuoc-ngoai/">
+                            <img class="media-object" src="./Kết quả tìm kiếm cho “a” – Coteccons_files/pc_vinhomes_central_park.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="http://www.coteccons.vn/doanh-nghiep-viet-thang-thau-nuoc-ngoai/">Doanh nghiệp Việt thắng thầu nước ngoài</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section LocalStyles{
+    <style>
+        .media-body, .media-left, .media-right {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .media-left, .media > .pull-left {
+            padding-right: 10px;
+        }
+
+        .caret {
+            border-top: 4px dashed;
+        }
+
+        .nav a:hover .caret {
+            border-top-color: initial !important;
+            border-bottom-color: initial !important;
+        }
+
+        .nav .caret {
+            border-top-color: initial !important;
+            border-bottom-color: initial !important;
+        }
+    </style>
+}
+@section LocalScripts{
+    <script src="~/Scripts/home/footer-not-homepage.js"></script>
+    <script src="~/Scripts/home/custom-footer.js"></script>
+}

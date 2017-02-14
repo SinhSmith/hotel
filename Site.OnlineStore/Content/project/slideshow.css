@@ -1,0 +1,519 @@
+/*********************************
+* Slideshow Styling
+*********************************/
+#slideshow {
+width: 100%;
+height: 100%;
+margin: 100px auto;
+
+position:relative;
+
+overflow: hidden;
+}
+#slideshow.fullscreen {
+
+/*min-height: 536px;*/
+max-height: 636px;
+
+/*position: static;*/  /*fixed*/
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+
+#slideshow .custom-slideshow {
+	/*
+	height:450px;
+	text-align:center;
+	*/
+	
+	position: relative;
+    width: 100%;
+    /*border: 1px solid black;*/
+    overflow: hidden;
+	min-height:450px;
+	max-height: 657px;
+	
+}
+#slideshow .dummy {
+    padding-top: 100%; /* forces 1:1 aspect ratio */
+}
+
+
+.img-wrapper {
+	min-width: 100%;
+	/*min-height: 100%;*/
+	position: absolute;
+	top: 9px; /*278px;*/
+	bottom: 131px; /*278px;*/
+	left: 0;
+	right: 0;
+	margin: auto;
+	overflow: hidden;
+	z-index:8;
+	background-color: #333;
+	display: none;
+
+/*
+background-size: cover;
+background-position: center center;
+*/
+
+}
+
+
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	  
+	  #slideshow.fullscreen {
+	min-height: 336px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+	}
+	
+	.img-wrapper {
+		min-width: 100%;
+		min-height: 100%;
+		
+		position: absolute;
+		top: 278px;
+		bottom: 278px;
+		left: 0;
+		right: 0;
+		
+		margin: auto;
+		overflow: hidden;
+		
+		z-index:8;
+		
+		background-color: #333;
+		display: none;
+	}
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	  
+	  #slideshow.fullscreen {
+	min-height: 336px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	  
+	  #slideshow.fullscreen {
+	min-height: 336px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+	}
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+  
+  #slideshow.fullscreen {
+	min-height: 336px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+	}
+	
+	.img-wrapper {
+		min-width: 100%;
+		min-height: 100%;
+		
+		position: absolute;
+		top: 278px;
+		bottom: 278px;
+		left: 0;
+		right: 0;
+		
+		margin: auto;
+		overflow: hidden;
+		
+		z-index:8;
+		
+		background-color: #333;
+		display: none;
+	}
+	
+	#slideshow .img-wrapper.active img {
+		width:100%;
+	}
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+  
+  #slideshow.fullscreen {
+	min-height: 336px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+	}
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+  
+  #slideshow.fullscreen {
+	min-height: 336px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+	}
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+  
+  #slideshow.fullscreen {
+	min-height: 336px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+	}
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  
+  #slideshow.fullscreen {
+	min-height: 336px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+	}
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+  
+  #slideshow.fullscreen {
+	min-height: 336px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+	}
+
+}
+
+
+
+
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+	#slideshow .img-wrapper.active img {
+		width:100%;
+	}
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+	#slideshow .img-wrapper.active img {
+		width:100%;
+	}
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: landscape) {
+	#slideshow .img-wrapper.active img {
+		width:100%;
+	}
+}
+
+/* ----------- Galaxy S4 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+	#slideshow .img-wrapper.active img {
+		width:100%;
+	}
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+	#slideshow .img-wrapper.active img {
+		width:100%;
+	}
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+	#slideshow .img-wrapper.active img {
+		width:100%;
+	}
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+	#slideshow .img-wrapper.active img {
+		width:100%;
+	}
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+	#slideshow .img-wrapper.active img {
+		width:100%;
+	}
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+	#slideshow .img-wrapper.active img {
+		width:100%;
+	}
+}
+
+
+#slideshow .img-wrapper.active {
+z-index:10;
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+
+justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+	
+}
+
+#slideshow .img-wrapper.active img{
+position: absolute;
+  top: -999px;            /* use sufficiently large number */
+  bottom: -999px;
+  left: -999px;
+  right: -999px;
+  margin: auto; 
+  	
+	/*
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+    
+    vertical-align: middle;
+    text-align: center;
+	*/
+	
+	/* left: 0;
+		height: 100%; */
+	
+	
+}
+
+
+
+
+#slideshow .img-wrapper.last-active {
+z-index:9;
+}
+
+/*********************************
+* Thumbnail Styling
+*********************************/
+.thumbs-container {
+width: 100%;
+height: 95px;
+position: absolute;
+left: 0;
+
+z-index: 11;
+
+/*background: #222222;*/
+
+opacity: .9;
+}
+.thumbs-container.top {
+top: 0;
+}
+.thumbs-container.bottom {
+bottom: 0;
+}
+.prev, .next {
+width: 3%;
+min-width: 40px;
+height: 48px;
+padding: 36px 1%;
+
+color: #999999;
+cursor: pointer;
+}
+.prev { float: left; }
+.next { float: right; }
+.prev:hover, .next:hover {
+color: #555555;
+}
+ul.thumbs {
+position: absolute;
+top: 0;
+left: 5%;
+right: 5%;
+height: 130px;
+padding: 0;
+margin: 0 5%;
+overflow: hidden;
+white-space: nowrap;
+text-align: center;
+}
+.thumb {
+display: inline-block;
+width: 114px;
+height: 79px;
+margin: 5px;
+
+overflow: hidden;
+background-size: cover;
+background-position: center center;
+
+cursor: pointer;
+}
+.thumb:first-of-type {
+margin-left: 0px;
+}
+.thumb.active {
+width: 116px;
+height: 79px;
+border-bottom: 4px solid #0078c9;
+margin-bottom: 4px;
+}

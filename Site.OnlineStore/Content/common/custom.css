@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+.os-tuyendart { opacity: 0;}
+.os-tuyendart.w3danima {opacity: 1;}
+		
+.box .button-link a{margin-bottom: 5px;}
+@media screen and (min-width: 992px) and (max-width: 1199px) { 
+.navbar-nav>li>a{padding: 11px 15px!important;}
+.slogan{margin-left:20px;}
+}
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+#owl-demo .item .bord .info{min-height:190px;}
+#slideshow.fullscreen {min-height: 336px;top: 0;left: 0;width: 100%;height: 100%;margin: 0;padding: 0;overflow: hidden;}
+}
+
+#tab1 .wmg-item:nth-child(1), #tab3 .wmg-item:nth-child(1){display: block;margin:0 auto;}
+.wmg-item{margin:0 auto;}
+.wmg-item{height: auto!important}
+.exemplo{padding: 15px;}
+.clearfix:before, .clearfix:after {display: table;content: " ";}
+.clearfix:after {clear: both;}
+.wmg-thumbnail-content img{width: 100%;}
+.h-103{height:103px;}
+h1.custom-detail {font: 400 28px/32px arial;margin-top: 6px;}
+.sub-right .media p{ font-size:11px; }
+.custom-duan .media {}
+.custom-duan .media .media-body p {padding: 0px;margin: 0px;}
+span.dropcap {display: inline-block;float: left;margin: 0 1px 0 0;font-size: 46px;line-height: 5px;}
+span.dropcap-2 {display: inline-block;float: left;margin: 0 8px 0 0;font-size: 27px;}
+span.dropcap.square {background-color: #E44E4F;color: #fff;padding: 0 11px;margin-top: 7px;line-height: 49px;}
+span.dropcap.square2 {background-color: #E44E4F;color: #fff;display: inline-block;float: left;font-size: 46px;line-height: 5px;line-height: 44px; margin-top: -28px;padding: 0px 6px;}
+
+.title3{border-bottom: #062245 solid 1px;margin-bottom: 10px;}
+.title3.title-bg{height: 27px;background: #cf1c24;}
+.title3.title-bg h3{line-height: 27px;padding-left: 15px;margin:0px;}
+.title3 h3{color: #fff;text-transform:uppercase;font-size:14px;margin-top:8px;}
+
+.page-heading, .page-heading span.h-title {font-family: Arial;font-weight: 400;line-height: 30px;font-size: 18px;text-align: initial;text-transform: initial;color: #000;}
+.page-heading span.h-title {display: inline-block;font: 17px/36px "Arvo" , sans-serif;font-weight: bold;padding: 5px 10px 5px 0;color: #626262;min-height: 46px;}
+.page-heading {border-bottom-color: #A7E5FC;}
+.page-heading {position: relative;margin: 0 0 20px 0;border-bottom: 1px solid #C9C9C9;}
+.page-heading:before {background-color: #E44E4F;width: 120px;height: 2px;display: inline-block;position: absolute;bottom: -2px;content: '';left: 0;}
+*:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+#mylist .port {display:none;float:left;overflow:hidden;margin-bottom: 15px;margin-top: 15px;width:234px;}
+.port-wrapper {overflow:hidden;position: relative !important;cursor:pointer;padding: 2px;}
+.port img {width:100%;min-height:240px;max-height:240px;position: relative;border: 1px #E0E0E0 solid;}
+.port-wrapper .new {position: absolute;top: 0px;left: 0px;z-index: 999}
+.port .label {position: absolute;width: 100%;height:90px;bottom:-90px;white-space: normal;text-align: left;}
+.port .label:last-child{font-size: 12px;line-height: 20px;}
+.port .label-bg {background: rgba(4, 4, 4, 0.35);width: 100%;height:100%;position: absolute;top:0;left:0;}
+.port .label-text {color:#fff;position: relative;z-index:500;padding:10px 8px;}
+.port .text-category {display:block;font-size:9px;}
+.port .label-text a{font-size: 15px;text-decoration: none;color: #fff;}
+#timeline h4 {text-align:center;}
+#main-portfolio {text-align:center;}
+#main-portfolio ul {display:flex;  list-style:none;}
+#main-portfolio ul li {width: auto;float: left;padding: 7px 10px;}
+#portfoliolist .owl-item .item .portfolio-wrapper p {margin:0px;	}
+.custom-w100{width:100% !important;}
+.custom-border-radius-none{border-radius: 0px !important;	}
+.project-list-relation img{width:169px;height:99px;	}
+.list-bat-dong-san img{width: 360px;height:240px;	}
+.sub_top {display:none; position:fixed; right:0px; bottom:10px; width:40px; z-index:1000;}
+.sub_top a {display:block;}
+.sub_top a img {width:40px;}
+.sub_top { /*left:50%;*/ right: 1%; bottom:1px; margin-left:500px;}
+
+#custom-form select, #custom-form input:not(.wpcf7-mathcaptcha){width:100%;	}
+#custom-form select, #custom-form input {height: 33px;	}
+#custom-form input[type='submit'] {width:30%;}
+
+/*list image Co Dong*/
+.codong .custom-img img {max-height: 100px;}
+.frm_contact input[type=text]:not(#recaptcha_response_field), .frm_contact input[type=email], .frm_contact input[type=phone], .frm_contact input[type=tel] {height:37px;padding-left: 13px;}
+.frm_contact textarea {padding-left: 11px;font-size: 13px;}
+
+/* Client & Partners*/
+.img-boder{border:1px #E0E0E0 solid;	}
+#partners .col-md-2 img, #clients .col-md-2 img{width:95px;height:62px;	}
+
+/*Tuyen dung*/
+.tuyendung a{font-size:16px; font:bold;}
+.tuyendung ul li {padding: 5px 0px;list-style-type: none;line-height: 41px;}
+.tuyendung ul li time {float: right;color: #235695;}
+.tuyendung-detail .col-md-5 {line-height:27px;text-align:justify;	}
+.tuyendung-detail .center-block {text-align:center;padding: 20px 0px;}
+
+/*news*/
+.news_detail .img-responsive {margin: 0 auto;display: -webkit-inline-box;}
+.news_detail img.aligncenter {display: block;margin: 0 auto;}
+.news_detail img.alignleft {padding: 0px 14px 5px 0px;}
+.news_detail img.alignright {padding: 0px 0px 5px 14px;}
+.tintuc .custom-big img{max-height: 499px;}
+.tintuc .custom-small a.post-thumbnail img{max-height: 219px;}
+
+/*Can bo chu chot*/
+.og-bg span small {
+	font-size: 81% !important;
+}
+

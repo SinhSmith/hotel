@@ -1,0 +1,298 @@
+﻿@using PagedList.Mvc
+@using PagedList;
+
+@model IPagedList<Portal.Model.ViewModel.CMSNewsView>
+
+@{
+    ViewBag.Title = ViewBag.CategoryTitle;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb" vocab="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="http://www.coteccons.vn/"><i class="glyphicon glyphicon-home"></i> Trang chủ</a></span> / <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="http://www.coteccons.vn/thong-tin/">Tin tức</a></span> / <span class="current"> Tin Công Ty</span></div>
+                <!--
+                <ol class="breadcrumb">
+                  <li><i class="glyphicon glyphicon-home"></i> <a href="#">Trang chủ</a></li>
+                  <li><a href="#">Tin tức</a></li>
+                  <li class="active">Thông tin công ty</li>
+                </ol>
+                -->
+            </div>
+        </div>
+    </div>
+</section>
+<section class="project">
+    <div class="container">
+        <div class="row tintuc">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+
+                <div class="title os-tuyendart w3danima">
+                    <div class="fleft">
+                        <h3 style="color:#062245;">Tin Công Ty</h3>
+                    </div>
+                    <br clear="all">
+                </div>
+                <div class="row mgb10 custom-big">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <a class="post-thumbnail image-link" href="http://www.coteccons.vn/coteccons-to-chuc-cotecconss-night-voi-chu-de-giai-nhiet-mua-he/">
+                            <img src="./Tin Công Ty – Coteccons_files/ctc-coteccons-night-h8.jpg" class="img-responsive" alt="business-lawyer-glenroy">
+                        </a>
+                        <span class="term-title term-13"><a class="colorf" href="javascript:void(0)">Tin Công Ty</a></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h2 class="title-news">
+                            <a class="post-url" rel="bookmark" href="http://www.coteccons.vn/coteccons-to-chuc-cotecconss-night-voi-chu-de-giai-nhiet-mua-he/" title="Coteccons tổ chức Coteccons’ Night với chủ đề “Giải Nhiệt Mùa Hè”">Coteccons tổ chức Coteccons’ Night với chủ đề “Giải Nhiệt Mùa Hè”</a>
+                        </h2>
+                        <div class="post-summary summary the-content">Tối 12/08/2016, Ban Lãnh Đạo Coteccons Group đã tổ chức buổi tiệc thân mật dành cho gần 800 CBNV đang làm việc tại các dự án miền Bắc tại TT Hội nghị Quốc Gia (Hà Nội).</div>
+                        <a class="btn btn-read-more" href="http://www.coteccons.vn/coteccons-to-chuc-cotecconss-night-voi-chu-de-giai-nhiet-mua-he/" title="Xem thêm">Xem thêm</a>
+                    </div>
+                </div><hr><div class="row mgb10 custom-small">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <a class="post-thumbnail image-link" href="http://www.coteccons.vn/coteccons-duoc-binh-chon-vao-top-30-bao-cao-thuong-nien-tot-nhat-2016/">
+                            <img src="./Tin Công Ty – Coteccons_files/ctc_bctn_2016_h1.jpg" class="img-responsive" alt="business-lawyer-glenroy">
+                        </a>
+                        <span class="term-title term-13"><a class="colorf" href="javascript:void(0)">Tin Công Ty</a></span>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <h2 class="title-news">
+                            <a class="post-url" rel="bookmark" href="http://www.coteccons.vn/coteccons-duoc-binh-chon-vao-top-30-bao-cao-thuong-nien-tot-nhat-2016/" title="Coteccons được bình chọn vào top 30 báo cáo thường niên tốt nhất 2016">Coteccons được bình chọn vào top 30 báo cáo thường niên tốt nhất 2016</a>
+                        </h2>
+                        <div class="post-summary summary the-content">Lễ trao giải cuộc bình chọn Báo cáo thường niên tốt nhất do HOSE và Báo Đầu tư Chứng khoán phối hợp tổ chức ngày 29/07/2016, Coteccons tiếp tục được bình chọn là một trong 30 đơn vị có Báo cáo thường niên tốt nhất.</div>
+                        <a class="btn btn-read-more" href="http://www.coteccons.vn/coteccons-duoc-binh-chon-vao-top-30-bao-cao-thuong-nien-tot-nhat-2016/" title="Xem thêm">Xem thêm</a>
+                    </div>
+                </div>
+                <hr><div class="row mgb10 custom-small">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <a class="post-thumbnail image-link" href="http://www.coteccons.vn/coteccons-dat-giai-ba-cuoc-thi-tekla-bim-awards-2016/">
+                            <img src="./Tin Công Ty – Coteccons_files/ctc_tekla_award.jpg" class="img-responsive" alt="business-lawyer-glenroy">
+                        </a>
+                        <span class="term-title term-13"><a class="colorf" href="javascript:void(0)">Tin Công Ty</a></span>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <h2 class="title-news">
+                            <a class="post-url" rel="bookmark" href="http://www.coteccons.vn/coteccons-dat-giai-ba-cuoc-thi-tekla-bim-awards-2016/" title="Coteccons đạt giải ba cuộc thi Tekla Bim Awards 2016">Coteccons đạt giải ba cuộc thi Tekla Bim Awards 2016</a>
+                        </h2>
+                        <div class="post-summary summary the-content">Dự án The Gold View của Coteccons đã xuất sắc vượt qua hàng loạt đối thủ đến từ các nước ASEAN để giành giải ba cuộc thi Tekla BIM Awards 2016.</div>
+                        <a class="btn btn-read-more" href="http://www.coteccons.vn/coteccons-dat-giai-ba-cuoc-thi-tekla-bim-awards-2016/" title="Xem thêm">Xem thêm</a>
+                    </div>
+                </div>
+                <hr><div class="row mgb10 custom-small">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <a class="post-thumbnail image-link" href="http://www.coteccons.vn/coteccons-tham-gia-hoi-thao-nhung-bien-phap-to-chuc-va-quan-ly-moi-trong-thi-cong-xay-dung-cua-hiep-hoi-nha-thau-xay-dung-viet-nam-vacc/">
+                            <img src="./Tin Công Ty – Coteccons_files/ctc_vacc_2016_h1-6.jpg" class="img-responsive" alt="business-lawyer-glenroy">
+                        </a>
+                        <span class="term-title term-13"><a class="colorf" href="javascript:void(0)">Tin Công Ty</a></span>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <h2 class="title-news">
+                            <a class="post-url" rel="bookmark" href="http://www.coteccons.vn/coteccons-tham-gia-hoi-thao-nhung-bien-phap-to-chuc-va-quan-ly-moi-trong-thi-cong-xay-dung-cua-hiep-hoi-nha-thau-xay-dung-viet-nam-vacc/" title="Coteccons tham gia hội thảo “Những biện pháp tổ chức và quản lý mới trong thi công xây dựng” của Hiệp hội nhà thầu xây dựng Việt Nam (VACC)">Coteccons tham gia hội thảo “Những biện pháp tổ chức và quản lý mới trong thi công xây dựng” của Hiệp hội nhà thầu xây dựng Việt Nam (VACC)</a>
+                        </h2>
+                        <div class="post-summary summary the-content">Coteccons, với vị thế tập đoàn xây dựng tư nhân hàng đầu Việt Nam, đã mang đến hội thảo buổi chia sẻ thiết thực về Mô hình quản lý và điều hành dự án.</div>
+                        <a class="btn btn-read-more" href="http://www.coteccons.vn/coteccons-tham-gia-hoi-thao-nhung-bien-phap-to-chuc-va-quan-ly-moi-trong-thi-cong-xay-dung-cua-hiep-hoi-nha-thau-xay-dung-viet-nam-vacc/" title="Xem thêm">Xem thêm</a>
+                    </div>
+                </div>
+                <hr><div class="row mgb10 custom-small">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <a class="post-thumbnail image-link" href="http://www.coteccons.vn/coteccons-xep-thu-9-trong-top-50-doanh-nghiep-kinh-doanh-hieu-qua-nhat-viet-nam-2015/">
+                            <img src="./Tin Công Ty – Coteccons_files/ctc_top50_dnkdhq_h2.jpg" class="img-responsive" alt="business-lawyer-glenroy">
+                        </a>
+                        <span class="term-title term-13"><a class="colorf" href="javascript:void(0)">Tin Công Ty</a></span>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <h2 class="title-news">
+                            <a class="post-url" rel="bookmark" href="http://www.coteccons.vn/coteccons-xep-thu-9-trong-top-50-doanh-nghiep-kinh-doanh-hieu-qua-nhat-viet-nam-2015/" title="Coteccons xếp thứ 9 trong Top 50 Doanh nghiệp kinh doanh hiệu quả nhất Việt Nam 2015">Coteccons xếp thứ 9 trong Top 50 Doanh nghiệp kinh doanh hiệu quả nhất Việt Nam 2015</a>
+                        </h2>
+                        <div class="post-summary summary the-content">Ngày 16/6/2016 vừa qua, COTECCONS đã tiếp tục được vinh danh là một trong 50 công ty kinh doanh hiệu quả nhất Việt Nam</div>
+                        <a class="btn btn-read-more" href="http://www.coteccons.vn/coteccons-xep-thu-9-trong-top-50-doanh-nghiep-kinh-doanh-hieu-qua-nhat-viet-nam-2015/" title="Xem thêm">Xem thêm</a>
+                    </div>
+                </div>
+                <hr><div id="pagination">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="active"><span>1</span></li>
+                            <li class="after delta-1"><a href="http://www.coteccons.vn/thong-tin/tin-cong-ty/page/2/">2</a></li>
+                            <li class="after delta-2"><a href="http://www.coteccons.vn/thong-tin/tin-cong-ty/page/3/">3</a></li>
+                            <li class="after delta-3"><a href="http://www.coteccons.vn/thong-tin/tin-cong-ty/page/4/">4</a></li>
+                            <li class="after delta-4 tail"><a href="http://www.coteccons.vn/thong-tin/tin-cong-ty/page/5/">5</a></li>
+                            <li class="next"><a href="http://www.coteccons.vn/thong-tin/tin-cong-ty/page/2/">&gt;</a></li>
+                            <li class="last"><a href="http://www.coteccons.vn/thong-tin/tin-cong-ty/page/18/">»</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="box">
+                    <div class="title3 os-tuyendart w3danima">
+                        <div class="fleft">
+                            <h3 style="color:#062245;">Tin tức</h3>
+                        </div>
+                        <br clear="all">
+                    </div>
+                    <div class="boxlink">
+                        <ul id="menu-mn-right-news" class="">
+                            <li id="menu-item-621" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-621">» <a href="http://www.coteccons.vn/thong-tin/tin-cong-ty/">Tin công ty</a></li>
+                            <li id="menu-item-620" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-620">» <a href="http://www.coteccons.vn/thong-tin/tin-cong-trinh/">Tin Công Trình</a></li>
+                            <li id="menu-item-623" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-623">» <a href="http://www.coteccons.vn/thong-tin/tin-doan-the/">Tin Đoàn thể</a></li>
+                            <li id="menu-item-639" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-639">» <a href="http://www.coteccons.vn/thong-tin/tin-thi-truong/">Tin Thị Trường</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <br clear="all">
+                <div class="box sub-right">
+                    <div class="title title-bg os-tuyendart w3danima">
+                        <h3>Thông tin dự án</h3>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="http://www.coteccons.vn/du-an/landmark-81/">
+                                <img class="media-object" src="./Tin Công Ty – Coteccons_files/Landmark81-2-1.jpg" alt="The Landmark 81">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="http://www.coteccons.vn/du-an/landmark-81/">The Landmark 81</a>
+                            <p></p><p>Quận Bình Thạnh, Tp.&nbsp;HCM</p><p></p>
+                        </div>
+                    </div><div class="media">
+                        <div class="media-left">
+                            <a href="http://www.coteccons.vn/du-an/vinhomes-gardenia/">
+                                <img class="media-object" src="./Tin Công Ty – Coteccons_files/ctc_gardenia_phoicanh.jpg" alt="Vinhomes Gardenia">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="http://www.coteccons.vn/du-an/vinhomes-gardenia/">Vinhomes Gardenia</a>
+                            <p></p><p>Quận Nam Từ Liêm, Hà Nội</p><p></p>
+                        </div>
+                    </div><div class="media">
+                        <div class="media-left">
+                            <a href="http://www.coteccons.vn/du-an/khu-can-ho-cao-cap-dich-vu-nam-sai-gon/">
+                                <img class="media-object" src="./Tin Công Ty – Coteccons_files/ctd_namsaigon_1462949702.jpg" alt="Khu căn hộ cao cấp DV Nam Sài Gòn">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="http://www.coteccons.vn/du-an/khu-can-ho-cao-cap-dich-vu-nam-sai-gon/">Khu căn hộ cao cấp DV Nam Sài Gòn</a>
+                            <p></p><p>Quận 7, Tp. HCM</p><p></p>
+                        </div>
+                    </div><div class="media">
+                        <div class="media-left">
+                            <a href="http://www.coteccons.vn/du-an/hh01/">
+                                <img class="media-object" src="./Tin Công Ty – Coteccons_files/ctc_hh01_pc.jpg" alt="Trung tâm TMDV và nhà ở HH01">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="http://www.coteccons.vn/du-an/hh01/">Trung tâm TMDV và nhà ở HH01</a>
+                            <p></p><p>Quận Hà Đông, Hà Nội</p><p></p>
+                        </div>
+                    </div><div class="media">
+                        <div class="media-left">
+                            <a href="http://www.coteccons.vn/du-an/masteri-villas/">
+                                <img class="media-object" src="./Tin Công Ty – Coteccons_files/ctc_masteri_villas_h1.jpg" alt="Vinhomes Thăng Long">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="http://www.coteccons.vn/du-an/masteri-villas/">Vinhomes Thăng Long</a>
+                            <p></p><p>Huyện&nbsp;Hoài Đức, Hà Nội</p><p></p>
+                        </div>
+                    </div><div class="media">
+                        <div class="media-left">
+                            <a href="http://www.coteccons.vn/du-an/chung-cu-cao-tang-ket-hop-trung-tam-thuong-mai-va-van-phong/">
+                                <img class="media-object" src="./Tin Công Ty – Coteccons_files/ctc_everrich_8_pc.jpg" alt="Khu Căn hộ, TM &amp; VP (Everrich 8)">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="http://www.coteccons.vn/du-an/chung-cu-cao-tang-ket-hop-trung-tam-thuong-mai-va-van-phong/">Khu Căn hộ, TM &amp; VP (Everrich 8)</a>
+                            <p></p><p>Quận 4, Tp. HCM</p><p></p>
+                        </div>
+                    </div><div class="media">
+                        <div class="media-left">
+                            <a href="http://www.coteccons.vn/du-an/khu-dan-cu-phuong-phu-huu-lucasta/">
+                                <img class="media-object" src="./Tin Công Ty – Coteccons_files/ctc_lucasta_pc.jpg" alt="Khu dân cư Lucasta">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="http://www.coteccons.vn/du-an/khu-dan-cu-phuong-phu-huu-lucasta/">Khu dân cư Lucasta</a>
+                            <p></p><p>Quận&nbsp;9, Tp. HCM</p><p></p>
+                        </div>
+                    </div><div class="media">
+                        <div class="media-left">
+                            <a href="http://www.coteccons.vn/du-an/diamond-lotus/">
+                                <img class="media-object" src="./Tin Công Ty – Coteccons_files/diamond_lotus_pc_1457670143.jpg" alt="Diamond Lotus">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="http://www.coteccons.vn/du-an/diamond-lotus/">Diamond Lotus</a>
+                            <p></p><p>Quận 8, Tp. HCM</p><p></p>
+                        </div>
+                    </div><div class="media">
+                        <div class="media-left">
+                            <a href="http://www.coteccons.vn/du-an/english-diamond-island-giai-doan-ii/">
+                                <img class="media-object" src="./Tin Công Ty – Coteccons_files/ctd_diamond_island_gd2_1462951219.jpg" alt="Diamond Island (GĐ2)">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="http://www.coteccons.vn/du-an/english-diamond-island-giai-doan-ii/">Diamond Island (GĐ2)</a>
+                            <p></p><p>Bình Khánh, Bình Trưng Tây, Q.2, HCM</p><p></p>
+                        </div>
+                    </div>
+                </div>
+                <br clear="all">
+                <div class="title3 os-tuyendart w3danima">
+                    <div class="fleft">
+                        <h3 style="color:#062245;">Tin thị trường</h3>
+                    </div>
+                    <br clear="all">
+                </div>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="http://www.coteccons.vn/coteccons-du-kien-chon-dau-tu-mot-so-can-ho-panorama-nha-trang/">
+                            <img class="media-object" src="./Tin Công Ty – Coteccons_files/ctc-panorama-nhatrang-h4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="http://www.coteccons.vn/coteccons-du-kien-chon-dau-tu-mot-so-can-ho-panorama-nha-trang/">Coteccons dự kiến chọn đầu tư một số căn hộ Panorama Nha Trang</a>
+                    </div>
+                </div><div class="media">
+                    <div class="media-left">
+                        <a href="http://www.coteccons.vn/tnr-holdings-viet-nam-va-moi-duyen-voi-cac-giai-thuong/">
+                            <img class="media-object" src="./Tin Công Ty – Coteccons_files/20160622081135-943d.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="http://www.coteccons.vn/tnr-holdings-viet-nam-va-moi-duyen-voi-cac-giai-thuong/">TNR Holdings Việt Nam và mối “duyên” với các giải thưởng</a>
+                    </div>
+                </div><div class="media">
+                    <div class="media-left">
+                        <a href="http://www.coteccons.vn/doanh-nghiep-viet-thang-thau-nuoc-ngoai/">
+                            <img class="media-object" src="./Tin Công Ty – Coteccons_files/pc_vinhomes_central_park.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="http://www.coteccons.vn/doanh-nghiep-viet-thang-thau-nuoc-ngoai/">Doanh nghiệp Việt thắng thầu nước ngoài</a>
+                    </div>
+                </div><div class="media">
+                    <div class="media-left">
+                        <a href="http://www.coteccons.vn/coteccons-va-cau-chuyen-sieu-du-an-the-landmark-81/">
+                            <img class="media-object" src="./Tin Công Ty – Coteccons_files/blp0807_141711712.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="http://www.coteccons.vn/coteccons-va-cau-chuyen-sieu-du-an-the-landmark-81/">Coteccons và câu chuyện "siêu dự án" The Landmark 81</a>
+                    </div>
+                </div><div class="media">
+                    <div class="media-left">
+                        <a href="http://www.coteccons.vn/du-an-ho-tram-duoc-rot-them-75-trieu-usd-sau-chuyen-tham-cua-ong-obama/">
+                            <img class="media-object" src="./Tin Công Ty – Coteccons_files/ctc_grandhotram_mou.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="http://www.coteccons.vn/du-an-ho-tram-duoc-rot-them-75-trieu-usd-sau-chuyen-tham-cua-ong-obama/">Dự án Hồ Tràm được rót thêm 75 triệu USD sau chuyến thăm của ông Obama</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

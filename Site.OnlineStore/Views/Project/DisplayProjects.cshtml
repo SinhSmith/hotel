@@ -1,0 +1,79 @@
+﻿@using PagedList.Mvc
+@using PagedList;
+@model IPagedList<Portal.Model.Context.portal_Projects>
+@{
+    ViewBag.Title = "Dự án";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+
+@section Breadcrumb{
+    <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="~/Home/Index"><i class="glyphicon glyphicon-home"></i> Trang chủ</a></span> / <span class="current">Dự án</span>
+}
+
+@section ContentPage{
+    <div class="custom-project-list">
+        <div class="title os-tuyendart w3danima">
+            <div class="fleft">
+                <h3 style="color:#062245;">@ViewBag.Category</h3>
+            </div>
+            <br clear="all">
+        </div>
+        @if (Model.Count() > 0)
+        {
+            foreach (var project in Model)
+            {
+                <div class="col-xs-12 col-sm-6 col-md-4 project-box">
+                    <div class="pic">
+                        <a href="~/Project/ProjectDetails/@project.Id" title="@project.Name">
+                            @if (project.CoverImage != null)
+                            {
+                                <img class="pic-image" src="@project.CoverImage.ImagePath" alt="@project.Name">
+                            }
+                            else
+                            {
+                                <img class="pic-image" src="" alt="@project.Name">
+                            }
+                        </a>
+                    </div>
+                    <h5><a href="~/Project/ProjectDetails/@project.Id">@project.Name</a></h5>
+                    <h6><a href="~/Project/ProjectDetails/@project.Id">Xem thêm</a></h6>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-xs-12 col-sm-12 col-md-12">Không có dữ liệu</div>
+        }
+        <br clear="all">
+        <div class="row" id="pagination">
+            @switch ((Portal.Infractructure.Utility.Define.CategoryType)ViewBag.CategoryType)
+            {
+                case Portal.Infractructure.Utility.Define.CategoryType.All:
+                    {
+                        @Html.PagedListPager(Model, page => Url.Action("Index", "Project", new { ViewBag.CategoryValue, keyword = Request.QueryString["keyword"], page }));
+                                                                                                                                                      break;
+                    }
+                case Portal.Infractructure.Utility.Define.CategoryType.ProgressStatus:
+                    {
+                        @Html.PagedListPager(Model, page => Url.Action("GetProjectByProgressStatus", "Project", new { progressStatus = ViewBag.CategoryValue, keyword = Request.QueryString["keyword"], page }));
+                                                                                                                                                                                            break;
+                    }
+                case Portal.Infractructure.Utility.Define.CategoryType.Region:
+                    {
+                        @Html.PagedListPager(Model, page => Url.Action("GetProjectByRegion", "Project", new { region = ViewBag.CategoryValue, keyword = Request.QueryString["keyword"], page }));
+                                                                                                                                                                            break;
+                    }
+                case Portal.Infractructure.Utility.Define.CategoryType.ProjectType:
+                    {
+                        @Html.PagedListPager(Model, page => Url.Action("GetProjectByType", "Project", new { type = ViewBag.CategoryValue, keyword = Request.QueryString["keyword"], page }));
+                                                                                                                                                                        break;
+                    }
+            }
+        </div>
+    </div>
+}
+
+@section CustomScripts{
+    <script src="~/Scripts/home/footer-not-homepage.js"></script>
+    <script src="~/Scripts/home/custom-footer.js"></script>
+}

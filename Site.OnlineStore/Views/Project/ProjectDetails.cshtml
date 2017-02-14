@@ -1,0 +1,197 @@
+﻿@model Portal.Model.Context.portal_Projects
+@{
+    ViewBag.Title = "ProjectDetails";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+
+@section Breadcrumb{
+    <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="~/Home/Index"><i class="glyphicon glyphicon-home"></i> Trang chủ</a></span> / <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="Project/Index">Dự án</a></span> / <span class="current">@Model.Name</span>
+}
+@section ContentPage{
+    <div class="title3 os-tuyendart w3danima">
+        <div class="fleft">
+            <h3 style="color:#062245;">@Model.Name</h3>
+        </div>
+        <br clear="all">
+    </div>
+    <div class="row">
+        <br clear="all">
+        <div id="main-portfolio">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-6 col-md-4 text-left">
+                    Danh mục:
+                    @Html.ActionLink((string)ViewBag.ProjectType, "GetProjectByType", "Project", new { type = Model.Type }, null)
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 text-left" style="padding: 0px;">
+                    Theo khu vực: @Html.ActionLink((string)ViewBag.Region, "GetProjectByRegion", "Project", new { region = Model.Region }, null)
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 text-left">
+                    Tiến độ:
+                    @Html.ActionLink((string)ViewBag.ProgressStatus, "GetProjectByProgressStatus", "Project", new { progressStatus = Model.ProgressStatus }, null)
+                </div>
+            </div>
+        </div> <!-- #main-portfolio-->
+    </div>
+    <div class="">
+        <br clear="all">
+        <div id="slideshow" class="fullscreen">
+            <div class="custom-slideshow gallery">
+                <div class="dummy"></div>
+                @{
+                    var index = 1;
+                }
+                @foreach (var image in Model.share_Images)
+                {
+                    if (index == 1)
+                    {
+                        <div id="img-1" data-img-id=@index class="img-wrapper active" style="opacity: 1;">
+                            <a href=@image.ImagePath rel="prettyPhoto[gallery1]" title=@Model.Name>
+                                <img src=@image.ImagePath usemap="#image_map" style="height:517px;">
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div id="img-1" data-img-id=@index class="img-wrapper" style="opacity: 1;">
+                            <a href=@image.ImagePath rel="prettyPhoto[gallery1]" title=@Model.Name>
+                                <img src=@image.ImagePath usemap="#image_map" style="height:517px;">
+                            </a>
+                        </div>
+                    }
+
+                    index++;
+                }
+            </div>
+            <div class="thumbs-container bottom">
+                <div id="prev-btn" class="prev">
+                    <i class="fa fa-chevron-left fa-3x"></i>
+                </div>
+                <ul class="thumbs" id="portfolio-thumbs">
+                    @{var index2 = 1;}
+                    @foreach (var image in Model.share_Images)
+                    {
+                        <li data-thumb-id=@index2 class="thumb active" style="background-image: url(@image.ImagePath)"></li>
+                        index2++;
+                    }
+                </ul>
+                <div id="next-btn" class="next">
+                    <i class="fa fa-chevron-right fa-3x"></i>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <h1 class="page-heading "><span class="h-title">Chi tiết dự án</span></h1>
+            <div class="form-horizontal">
+
+                <div class="row innerLR">
+                    <div class="form-group">
+                        <label class="col-xs-4 col-sm-4 col-md-3 control-label" style="padding: 0px; text-align:right;">Địa chỉ:</label>
+                        <div class="col-xs-8 col-sm-8 col-md-9">
+                            <p>@Model.Address</p>
+                        </div>
+                    </div>
+                </div><div class="row innerLR">
+                    <div class="form-group">
+                        <label class="col-xs-4 col-sm-4 col-md-3 control-label" style="padding: 0px; text-align:right;">Chủ đầu tư:</label>
+                        <div class="col-xs-8 col-sm-8 col-md-9">
+                            <p>@Model.Investor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row innerLR">
+                    <div class="form-group">
+                        <label class="col-xs-4 col-sm-4 col-md-3 control-label" style="padding: 0px; text-align:right;">Gói thầu:</label>
+                        <div class="col-xs-8 col-sm-8 col-md-9">
+                            <p>@Model.ProjectPackage</p>
+                        </div>
+                    </div>
+                </div><div class="row innerLR">
+                    <div class="form-group">
+                        <label class="col-xs-4 col-sm-4 col-md-3 control-label" style="padding: 0px; text-align:right;">Giá trị hợp đồng:</label>
+                        <div class="col-xs-8 col-sm-8 col-md-9">
+                            <p>@Model.TotalInvestment</p>
+                        </div>
+                    </div>
+                </div><div class="row innerLR">
+                    <div class="form-group">
+                        <label class="col-xs-4 col-sm-4 col-md-3 control-label" style="padding: 0px; text-align:right;">Thời gian hoàn thành:</label>
+                        <div class="col-xs-8 col-sm-8 col-md-9">
+                            <p>@Model.Duration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br clear="all">
+            <br clear="all">
+
+        </div>
+        <div class="row">
+            <br clear="all">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <h1 class="page-heading"><span class="h-title" style="">Dự án liên quan</span></h1>
+                @foreach (Portal.Model.Context.portal_Projects project in ViewBag.RelatedProjects)
+                {
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="media" style="padding: 3px 0px;">
+                                <div class="col-md-4 project-list-relation" style="padding-right: 0px;">
+                                    <a href="~/Project/ProjectDetails/@project.Id">
+                                        <img class="media-object img-responsive" src=@project.CoverImage.ImagePath alt="">
+                                    </a>
+                                </div>
+                                <div class="col-md-8 ">
+                                    <a href="~/Project/ProjectDetails/@project.Id">@project.Name</a>
+                                    <p></p><p>@project.Description</p><p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h1 class="page-heading"><span class="h-title" style="">Tin tức liên quan</span></h1>
+                <div>
+                    <div class="boxlink">
+                        <ul>
+                            <li>» <a href="http://www.coteccons.vn/khoi-cong-du-an-khu-hon-hop-trung-tam-thuong-mai-dich-vu-va-nha-o-hh01-du-an-design-build/">Khởi công Khu hỗn hợp Trung tâm TM DV và Nhà ở HH01 (Design &amp; Build)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section CustomStyles{
+    <link href="~/Content/project/jquery.desoslide.css" rel="stylesheet" />
+    <link href="~/Content/project/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/project/slideshow.css" rel="stylesheet" />
+    <style type="text/css">
+        .fa-3x {
+            font-size: 1em !important;
+        }
+    </style>
+    <link href="~/Content/project/prettyPhoto.css" rel="stylesheet" />
+}
+
+@section CustomScripts{
+    <script src="~/Scripts/project/gallery.js"></script>
+    <script src="~/Scripts/project/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+
+        var count = $("#portfolio-thumbs li").size();
+
+        if (count <= 1) {
+            $('#prev-btn').hide();
+            $('#next-btn').hide();
+        }
+
+        $("area[rel^='prettyPhoto']").prettyPhoto({ social_tools: false });
+        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({ animation_speed: 'normal', theme: 'light_square', slideshow: 3000, autoplay_slideshow: false, social_tools: false });
+
+    });
+    </script>
+
+}

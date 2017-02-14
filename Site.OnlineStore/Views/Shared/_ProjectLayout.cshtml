@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb">
+                    @RenderSection("Breadcrumb", required: true)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="project">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-9">
+                @RenderSection("ContentPage",required:true)
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="box">
+                    <div class="title3 os-tuyendart w3danima">
+                        <div class="fleft">
+                            <h3 style="color:#062245;">Dự án</h3>
+                        </div>
+                        <br clear="all">
+                    </div>
+                    <div class="boxlink">
+
+                        <h1 class="page-heading "><span class="h-title">Theo dự án</span></h1>
+                        <div class="boxlink ">
+                            <ul>
+                                <li>
+                                    @Html.ActionLink("Thiết kế và thi công", "GetProjectByType", "Project", new { type = (int)Portal.Infractructure.Utility.Define.ProjectType.DesignAndConstruction }, null)
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Dân dụng", "GetProjectByType", "Project", new { type = (int)Portal.Infractructure.Utility.Define.ProjectType.CivilEngineering }, null)
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Công Nghiệp", "GetProjectByType", "Project", new { type = (int)Portal.Infractructure.Utility.Define.ProjectType.Industry }, null)
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Hạ tầng", "GetProjectByType", "Project", new { type = (int)Portal.Infractructure.Utility.Define.ProjectType.Infrastructure }, null)
+                                </li>
+                            </ul>
+                        </div>
+                        <h1 class="page-heading "><span class="h-title">Theo tiến độ</span></h1>
+                        <div class="boxlink ">
+                            <ul>
+                                <li>
+                                    @Html.ActionLink("Đã thi công", "GetProjectByProgressStatus", "Project", new { progressStatus = (int)Portal.Infractructure.Utility.Define.ProgressStatus.Completed }, null)
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Đang thi công", "GetProjectByProgressStatus", "Project", new { progressStatus = (int)Portal.Infractructure.Utility.Define.ProgressStatus.InProgress }, null)
+                                </li>
+                            </ul>
+                        </div>
+                        <h1 class="page-heading "><span class="h-title">Theo vị trí</span></h1>
+                        <div class="boxlink ">
+                            <ul>
+                                <li>
+                                    @Html.ActionLink("Miền Bắc", "GetProjectByRegion", "Project", new { region = (int)Portal.Infractructure.Utility.Define.Region.North }, null)
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Miền Nam", "GetProjectByRegion", "Project", new { region = (int)Portal.Infractructure.Utility.Define.Region.South }, null)
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Miền Trung", "GetProjectByRegion", "Project", new { region = (int)Portal.Infractructure.Utility.Define.Region.Central }, null)
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Ngoài nước", "GetProjectByRegion", "Project", new { region = (int)Portal.Infractructure.Utility.Define.Region.Foreign }, null)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section LocalStyles{
+    @RenderSection("CustomStyles",required:false)
+}
+@section LocalScripts{
+    @RenderSection("CustomScripts", required: false)
+}

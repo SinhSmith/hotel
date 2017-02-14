@@ -1,0 +1,279 @@
+﻿@model Portal.Model.ViewModel.ProjectFullView
+
+@{
+    ViewBag.Title = "Cập nhật dự án";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Library/ckeditor/ckeditor.js"></script>
+<script src="~/Scripts/admin/project-management.js"></script>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Danh sách dự án
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li class="active">Quản trị</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#common">Thông tin cơ bản</a></li>
+            <li><a data-toggle="tab" href="#images">Hình ảnh</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <!-- Common properties of project tab-->
+            <div id="common" class="tab-pane fade in active">
+                <!-- Common properties of project tab-->
+                <div class="row">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">Thông tin cơ bản sản phẩm</h3>
+                        </div>
+                        <div class="box-body">
+                            @using (Html.BeginForm())
+                            {
+                                <div class="form-horizontal">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    @Html.HiddenFor(model => model.Id)
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Region, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("Region", @ViewBag.Region as SelectList, "Chọn vùng", htmlAttributes: new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Region, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Investor, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Investor, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Investor, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ProjectPackage, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.ProjectPackage, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.ProjectPackage, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.TotalInvestment, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.TotalInvestment, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.TotalInvestment, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Duration, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Duration, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ProgressStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("ProgressStatus", @ViewBag.ProgressStatus as SelectList, "Chọn Tiến độ", htmlAttributes: new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.ProgressStatus, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("Type", @ViewBag.Type as SelectList, "Chọn Kiểu dự án", htmlAttributes: new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Description2, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.TextAreaFor(model => model.Description2, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Description2, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SortOrder, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.SortOrder, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.SortOrder, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.DropDownList("Status", @ViewBag.Status as SelectList, "Chọn trạng thái", new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Cập nhật" class="btn btn-primary" />
+                                            @Html.ActionLink("Trở lại danh sách", "Index", null, new { @class = "btn btn-default" })
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- images of project-->
+            <div id="images" class="tab-pane fade">
+                <!-- images of project-->
+                <div class="row">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">Danh mục hình ảnh sản phẩm</h3>
+                        </div>
+                        <div class="box-body">
+                            <div id="EditProject_ListProjectImages">
+                                <table class="table">
+                                    <tr>
+                                        <th>
+                                            Tên ảnh
+                                        </th>
+                                        <th>
+                                            Ảnh
+                                        </th>
+                                        <th>
+                                            Hiển thị
+                                        </th>
+                                        <th>
+                                            Ảnh đại diện
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                    @foreach (var item in Model.share_Images)
+                                    {
+                                        <tr data-id="@item.Id" class="display-mode">
+                                            <td>
+                                                @item.ImageName
+                                            </td>
+                                            <td>
+                                                <img src="@item.ImagePath" height="70" width="70" alt="ảnh không tồn tại" />
+                                            </td>
+                                            <td>
+                                                @if (item.IsActive)
+                                                {
+                                                    <span>Hiện</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>Ẩn</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                @if (Model.CoverImageId == item.Id)
+                                                {
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                }
+                                            </td>
+                                            <td>
+                                                <input type="button" id="EditProjectImage" onclick="ProjectManagement.editProjectImage(this,@item.Id)" value="Sửa" class="btn btn-primary">
+                                                <input type="button" id="DeleteProjectImage" onclick="ProjectManagement.requestDeleteProjectImage(@Model.Id,@item.Id)" value="Xóa" class="btn btn-danger">
+                                            </td>
+                                        </tr>
+                                        <tr data-id="@item.Id" class="edit-mode hidden">
+                                            <td>
+                                                @Html.EditorFor(modelItem => item.ImageName, new { htmlAttributes = new { @class = "txt-imagename" } })
+                                            </td>
+                                            <td>
+                                                <img src="@item.ImagePath" height="70" width="70" alt="ảnh không tồn tại" />
+                                            </td>
+                                            <td>
+                                                @Html.EditorFor(modelItem => item.IsActive, new { htmlAttributes = new { @class = "ckb-isactive" } })
+                                            </td>
+                                            <td>
+                                                @if (Model.CoverImageId == item.Id)
+                                                {
+                                                    <input type="checkbox" class="ckb-iscoverimage" checked />
+                                                }
+                                                else
+                                                {
+                                                    <input type="checkbox" class="ckb-iscoverimage" />
+                                                }
+                                            </td>
+                                            <td>
+                                                <input type="button" id="UpdateProjectImage" onclick="ProjectManagement.updateProjectImage(this,@Model.Id,@item.Id)" value="Cập nhật" class="btn btn-primary">
+                                                <input type="button" id="CancelUpdateProjectImage" onclick="ProjectManagement.cancelUpdateProjectImage(this,@item.Id)" value="Hủy" class="btn btn-danger">
+                                            </td>
+                                        </tr>
+                                    }
+                                </table>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10" id="ProjectEdit_UploadPartialView">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            @if (ViewBag.Error != null)
+                                            {
+                                                <h4 style="color:red">@ViewBag.Error</h4>
+                                            }
+                                            @using (Ajax.BeginForm("UploadImage", "Project", new AjaxOptions() { UpdateTargetId = "EditProject_ListProjectImages", HttpMethod = "POST", OnSuccess = "kaka2" }, new { enctype = "multipart/form-data" }))
+                                            {
+                                                @Html.AntiForgeryToken()
+                                                <input type="file" name="files" class="btn btn-info" style="display:inline-block;margin-right:10px;">
+                                                <input type="hidden" value=@Model.Id name="projectId" />
+                                                <input type="submit" value="upload" class="btn btn-danger" style="display:inline-block;width:100px;" />
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        ProjectManagement.init();
+    });
+</script>
