@@ -125,14 +125,15 @@
     </div>
 </div>
 <!--gallery end here-->
-<script src="js/jquery.chocolat.js"></script>
-<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
-<!--light-box-files -->
+@section LocalStyles{
+<link href="~/Content/css/chocolat.css" rel="stylesheet" />
+}
+
+@section LocalScripts{
+<script src="~/Scripts/common/jquery.chocolat.js"></script>
 <script type="text/javascript" charset="utf-8">
 		$(function() {
 			$('.gallery-grid a').Chocolat();
 		});
 </script>
-
-<!--room end here-->
-
+}
