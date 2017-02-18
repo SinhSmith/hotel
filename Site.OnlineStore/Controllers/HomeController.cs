@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Portal.Infractructure.Utility;
+using static Portal.Infractructure.Utility.Define;
 
 namespace Site.OnlineStore.Controllers
 {
@@ -86,6 +88,28 @@ namespace Site.OnlineStore.Controllers
             IPagedList<SearchResultViewModel> pageProjects = new StaticPagedList<SearchResultViewModel>(result.Items, (int)page, Portal.Infractructure.Utility.Define.DISPLAY_PROJECT_PAGE_SIZE, result.TotalItems);
             return View("Search", pageProjects);
         }
+
+        public ActionResult ServiceDetails(int id)
+        {
+            switch (id)
+            {
+                case (int)HotelServiceType.Room:
+                    {
+                        return View("AccomodationIntroduction");
+                    }
+                case (int)HotelServiceType.Spa:
+                    {
+                        return View("SpaIntroduction");
+                    }
+                case (int)HotelServiceType.Tour:
+                    {
+                        return View("TourIntroduction");
+                    }
+                default: return View("Services");
+                    
+            }
+        }
+
         #endregion
 
         #region Release resources

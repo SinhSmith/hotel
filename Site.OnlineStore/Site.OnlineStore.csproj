@@ -597,6 +597,7 @@
     <Content Include="Content\Images\b9.jpg" />
     <Content Include="Content\Images\bann.jpg" />
     <Content Include="Content\Images\banner.jpg" />
+    <Content Include="Content\Images\buffet.png" />
     <Content Include="Content\Images\bx_loader.gif" />
     <Content Include="Content\Images\close.png" />
     <Content Include="Content\Images\email.png" />
@@ -625,6 +626,7 @@
     <Content Include="Content\Images\keys.png" />
     <Content Include="Content\Images\left.png" />
     <Content Include="Content\Images\location.png" />
+    <Content Include="Content\Images\location_icon.png" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\no-image.png" />
     <Content Include="Content\admin\ionicons\2.0.1\css\ionicons.min.css" />
@@ -1463,6 +1465,7 @@
     <Content Include="Content\Images\r7.jpg" />
     <Content Include="Content\Images\r8.jpg" />
     <Content Include="Content\Images\right.png" />
+    <Content Include="Content\Images\room.png" />
     <Content Include="Content\Images\s1.jpg" />
     <Content Include="Content\Images\s1.png" />
     <Content Include="Content\Images\s10.jpg" />
@@ -1486,6 +1489,7 @@
     <Content Include="Content\Images\t3.jpg" />
     <Content Include="Content\Images\t4.jpg" />
     <Content Include="Content\Images\top-social.png" />
+    <Content Include="Content\Images\tour.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -2015,6 +2019,7 @@
     <Content Include="Content\img\form-contact-shadow.png" />
     <Content Include="Content\img\sprite.png" />
     <Content Include="services.html" />
+    <Content Include="single.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2079,6 +2084,9 @@
     <Content Include="Views\Home\Search.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Home\Rooms.cshtml" />
+    <Content Include="Views\Home\AccomodationIntroduction.cshtml" />
+    <Content Include="Views\Home\SpaIntroduction.cshtml" />
+    <Content Include="Views\Home\TourIntroduction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

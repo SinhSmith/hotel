@@ -90,6 +90,7 @@ namespace Portal.Infractructure.Utility
             [Description("Hạ tầng")]
             Infrastructure = 3
         }
+
         public enum CategoryType
         {
             All,
@@ -102,6 +103,13 @@ namespace Portal.Infractructure.Utility
         {
             News,
             Project
+        }
+
+        public enum HotelServiceType
+        {
+            Room,
+            Spa,
+            Tour
         }
     }
 }
