@@ -248,3 +248,29 @@
     bottom: 30%;
 }	
 }
+
+.room-images-list{
+    width:100%;
+    margin-top:5px;
+    overflow:auto;
+}
+
+/*Send email completed page*/
+.send-email-complated-container{
+     display:block;
+     width:100%;
+}
+
+.img-send-email-complated{
+    display: block;
+    margin: 30px auto;
+    width: 600px;
+}
+.send-email-complated-container h2{
+    font-size: 2.5em;
+    color: #e9a820;
+    margin-bottom: 0.5em;
+    font-family: 'Aladin', cursive;
+    text-align:center;
+}
+/*End Eend email completed page*/

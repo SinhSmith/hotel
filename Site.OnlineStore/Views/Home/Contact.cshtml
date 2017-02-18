@@ -1,4 +1,5 @@
-﻿@{
+﻿@model OnlineStoreMVC.Models.EmailFormModel
+@{
     ViewBag.Title = "Liên hệ";
 }
 
@@ -11,12 +12,17 @@
             </div>
             <div class="contact-bottom">
                 <div class="col-md-9 contact-left">
-                    <form>
-                        <input type="text" placeholder="Name">
-                        <input type="text" class="email" placeholder="Email">
-                        <textarea placeholder="Message" required=""></textarea>
-                        <input type="submit" value="Gửi">
-                    </form>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.TextBoxFor(m => m.FromName, new { placeholder = "Tên"})
+                        @Html.ValidationMessageFor(m => m.FromName)
+                        @Html.TextBoxFor(m => m.FromEmail, new { placeholder = "Địa chỉ email", @class = "email" })
+                        @Html.ValidationMessageFor(m => m.FromEmail)
+                        @Html.TextAreaFor(m => m.Message, new { placeholder = "Tin nhắn" })
+                        @Html.ValidationMessageFor(m => m.Message)
+                        <input type="submit" value="Gửi" />
+                    }
                 </div>
                 <div class="col-md-3 contact-right">
                     <h1>Địa chỉ</h1>
@@ -34,7 +40,40 @@
 <!--map start here-->
 <div class="map">
     <div class="container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387144.007583421!2d-73.97800349999999!3d40.7056308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1415253431785" frameborder="0" style="border:0"> </iframe>
+        <div id="map"></div>
+        @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387144.007583421!2d-73.97800349999999!3d40.7056308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1415253431785" frameborder="0" style="border:0"> </iframe>*@
+        @*<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2711.293792855305!2d108.23669057594509!3d16.04739778188126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1487409070466" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>*@
     </div>
 </div>
 <!--map end here-->
+
+
+
+@section LocalStyles{
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+
+}
+
+@section LocalScripts{
+    <script>
+        function initMap() {
+            var uluru = { lat: 16.0488285, lng: 108.2384136 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJW4PuEwBlrwteqERcoU4E-D3-QApQ-t0&callback=initMap">
+</script>
+}

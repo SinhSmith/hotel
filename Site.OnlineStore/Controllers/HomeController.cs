@@ -8,7 +8,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Portal.Infractructure.Utility;
-using static Portal.Infractructure.Utility.Define;
+using System.Threading.Tasks;
+using OnlineStoreMVC.Models;
+using System.Net;
+using System.Net.Mail;
 
 namespace Site.OnlineStore.Controllers
 {
@@ -65,6 +68,32 @@ namespace Site.OnlineStore.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Contact(EmailFormModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
+                var message = new MailMessage();
+                message.To.Add(new MailAddress("trungkien3289@gmail.com")); //replace with valid value
+                message.Subject = "Your email subject";
+                message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
+                message.IsBodyHtml = true;
+                using (var smtp = new SmtpClient())
+                {
+                    await smtp.SendMailAsync(message);
+                    return RedirectToAction("Sent");
+                }
+            }
+            return View(model);
+        }
+
+        public ActionResult Sent()
+        {
+            return View();
+        }
+
         public ActionResult _HeaderPartial()
         {
             return PartialView();
@@ -93,15 +122,15 @@ namespace Site.OnlineStore.Controllers
         {
             switch (id)
             {
-                case (int)HotelServiceType.Room:
+                case (int)Portal.Infractructure.Utility.Define.HotelServiceType.Room:
                     {
                         return View("AccomodationIntroduction");
                     }
-                case (int)HotelServiceType.Spa:
+                case (int)Portal.Infractructure.Utility.Define.HotelServiceType.Spa:
                     {
                         return View("SpaIntroduction");
                     }
-                case (int)HotelServiceType.Tour:
+                case (int)Portal.Infractructure.Utility.Define.HotelServiceType.Tour:
                     {
                         return View("TourIntroduction");
                     }
