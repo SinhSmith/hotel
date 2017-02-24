@@ -24,7 +24,7 @@ namespace Site.OnlineStore.Controllers
 
         public BaseController()
         {
-            _service = new CommonService();
+            //_service = new CommonService();
         }
 
         #endregion

@@ -19,7 +19,7 @@ namespace Site.OnlineStore
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             Application["OnlineVisitors"] = 0;
-            Application["TotalVisitors"] = (new SystemConfigService()).GetTotalVisitors();
+            //Application["TotalVisitors"] = (new SystemConfigService()).GetTotalVisitors();
         }
 
         protected void Application_End(object sender, EventArgs e)
@@ -34,19 +34,19 @@ namespace Site.OnlineStore
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            (new SystemConfigService()).UpdateTotalVisitors();
+            //(new SystemConfigService()).UpdateTotalVisitors();
 
-            Application.Lock();
-            Application["OnlineVisitors"] = (int)Application["OnlineVisitors"] + 1;
-            Application["TotalVisitors"] = (int)Application["TotalVisitors"] + 1;
-            Application.UnLock();
+            //Application.Lock();
+            //Application["OnlineVisitors"] = (int)Application["OnlineVisitors"] + 1;
+            //Application["TotalVisitors"] = (int)Application["TotalVisitors"] + 1;
+            //Application.UnLock();
         }
 
         protected void Session_End(object sender, EventArgs e)
         {
-            Application.Lock();
-            Application["OnlineVisitors"] = (int)Application["OnlineVisitors"] - 1;
-            Application.UnLock();
+            //Application.Lock();
+            //Application["OnlineVisitors"] = (int)Application["OnlineVisitors"] - 1;
+            //Application.UnLock();
         }
     }
 }

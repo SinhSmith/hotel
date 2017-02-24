@@ -192,8 +192,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="about.html" />
-    <Content Include="contact.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\admin\bootstrap\css\bootstrap.css" />
@@ -586,11 +584,7 @@
     <Content Include="Content\Images\arrows.png" />
     <Content Include="Content\Images\b1.jpg" />
     <Content Include="Content\Images\b2.jpg" />
-    <Content Include="Content\Images\b2.png" />
-    <Content Include="Content\Images\b3.jpg" />
-    <Content Include="Content\Images\b3.png" />
     <Content Include="Content\Images\b4.jpg" />
-    <Content Include="Content\Images\b4.png" />
     <Content Include="Content\Images\b5.jpg" />
     <Content Include="Content\Images\b6.jpg" />
     <Content Include="Content\Images\b7.jpg" />
@@ -601,48 +595,27 @@
     <Content Include="Content\Images\buffet.png" />
     <Content Include="Content\Images\bx_loader.gif" />
     <Content Include="Content\Images\close.png" />
-    <Content Include="Content\Images\danang-banner.jpg" />
     <Content Include="Content\Images\danang-banner.png" />
     <Content Include="Content\Images\email.png" />
     <Content Include="Content\Images\ftr-logo.png" />
     <Content Include="Content\Images\ftr-social.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2626.jpg" />
-    <Content Include="Content\Images\HotelImages\IMG_2629.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2629_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2629_small350.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2635.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2635_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2635_small350.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2636.jpg" />
-    <Content Include="Content\Images\HotelImages\IMG_2641.jpg" />
-    <Content Include="Content\Images\HotelImages\IMG_2645.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2645_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2645_small350.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2652.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2652_small350.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2653.jpg" />
-    <Content Include="Content\Images\HotelImages\IMG_2658-Pano.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2658-Pano_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2658-Pano_small350.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2658.jpg" />
-    <Content Include="Content\Images\HotelImages\IMG_2666.jpg" />
-    <Content Include="Content\Images\HotelImages\IMG_2668.jpg" />
-    <Content Include="Content\Images\HotelImages\IMG_2672.jpg" />
-    <Content Include="Content\Images\HotelImages\IMG_2676-Pano.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2676-Pano_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2676-Pano_small350.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2681.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2681_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2681_small350.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2683.jpg" />
-    <Content Include="Content\Images\HotelImages\IMG_2685.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2685_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2685_small350.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2691.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2691_small350.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2692.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2692_small350.png" />
-    <Content Include="Content\Images\HotelImages\IMG_2700.jpg" />
     <Content Include="Content\Images\HotelImages\IMG_2700_small350.png" />
     <Content Include="Content\Images\keys.png" />
     <Content Include="Content\Images\left.png" />
@@ -1506,17 +1479,12 @@
     <Content Include="Content\Images\ser-strip.jpg" />
     <Content Include="Content\Images\summer.png" />
     <Content Include="Content\Images\t-icn.png" />
-    <Content Include="Content\Images\t1.jpg" />
-    <Content Include="Content\Images\t2.jpg" />
-    <Content Include="Content\Images\t3.jpg" />
-    <Content Include="Content\Images\t4.jpg" />
     <Content Include="Content\Images\top-social.png" />
     <Content Include="Content\Images\tour.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="index.html" />
     <Content Include="Library\ckeditor\adapters\jquery.js" />
     <Content Include="Library\ckeditor\build-config.js" />
     <Content Include="Library\ckeditor\ckeditor.js" />
@@ -1812,7 +1780,6 @@
     <Content Include="Library\ckeditor\skins\moono\images\refresh.png" />
     <Content Include="Library\ckeditor\skins\moono\images\spinner.gif" />
     <Content Include="Library\ckeditor\styles.js" />
-    <Content Include="room.html" />
     <Content Include="Scripts\admin\Common.js" />
     <Content Include="Scripts\admin\project-management.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -2040,8 +2007,6 @@
     <Content Include="Content\img\contact-form.png" />
     <Content Include="Content\img\form-contact-shadow.png" />
     <Content Include="Content\img\sprite.png" />
-    <Content Include="services.html" />
-    <Content Include="single.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

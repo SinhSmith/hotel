@@ -19,19 +19,12 @@ namespace Site.OnlineStore.Controllers
     {
         #region Properties
 
-        IBannerService _bannerService = new BannerService();
-        ICMSNewsService _cmsNewsService = new CMSNewsService();
-        IDisplayProjectService _projectService = new DisplayProjectService();
-
         #endregion
 
         #region Constructures
 
         public HomeController()
         {
-            _bannerService = new BannerService();
-            _cmsNewsService = new CMSNewsService();
-            _projectService = new DisplayProjectService();
         }
 
         #endregion
@@ -40,7 +33,6 @@ namespace Site.OnlineStore.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.FeaturedProjects = _projectService.GetFeaturedProjects(6).ToList();
             return View();
         }
 
@@ -97,25 +89,6 @@ namespace Site.OnlineStore.Controllers
         public ActionResult _HeaderPartial()
         {
             return PartialView();
-        }
-
-        public ActionResult BannerPartial()
-        {
-            return PartialView(_bannerService.GetBanners1ForHomePage());
-        }
-
-        public ActionResult BlogPartial()
-        {
-            return PartialView(_cmsNewsService.GetCMSNewsForHomePage());
-        }
-
-        public ActionResult Search(string keyword = "",int? page = 1)
-        {
-            ViewBag.SearchString = keyword;
-            ViewBag.FeaturedProjects = _projectService.GetFeaturedProjects(6).ToList();
-            SearchResultResponse result = SeachData(keyword, page);
-            IPagedList<SearchResultViewModel> pageProjects = new StaticPagedList<SearchResultViewModel>(result.Items, (int)page, Portal.Infractructure.Utility.Define.DISPLAY_PROJECT_PAGE_SIZE, result.TotalItems);
-            return View("Search", pageProjects);
         }
 
         public ActionResult ServiceDetails(int id)
