@@ -68,7 +68,7 @@ namespace Site.OnlineStore.Controllers
             {
                 var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
                 var message = new MailMessage();
-                message.To.Add(new MailAddress("trungkien3289@gmail.com")); //replace with valid value
+                message.To.Add(new MailAddress("ctyngocvyhotel@gmail.com")); //replace with valid value
                 message.Subject = "Your email subject";
                 message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
                 message.IsBodyHtml = true;

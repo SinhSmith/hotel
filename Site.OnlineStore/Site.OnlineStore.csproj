@@ -599,23 +599,37 @@
     <Content Include="Content\Images\email.png" />
     <Content Include="Content\Images\ftr-logo.png" />
     <Content Include="Content\Images\ftr-social.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2626.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2629.png" />
     <Content Include="Content\Images\HotelImages\IMG_2629_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2629_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2635.png" />
     <Content Include="Content\Images\HotelImages\IMG_2635_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2635_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2645.png" />
     <Content Include="Content\Images\HotelImages\IMG_2645_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2645_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2652.png" />
     <Content Include="Content\Images\HotelImages\IMG_2652_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2658-Pano.png" />
     <Content Include="Content\Images\HotelImages\IMG_2658-Pano_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2658-Pano_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2672.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2672_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2676-Pano.png" />
     <Content Include="Content\Images\HotelImages\IMG_2676-Pano_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2676-Pano_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2681.png" />
     <Content Include="Content\Images\HotelImages\IMG_2681_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2681_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2685.png" />
     <Content Include="Content\Images\HotelImages\IMG_2685_small.png" />
     <Content Include="Content\Images\HotelImages\IMG_2685_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2691.png" />
     <Content Include="Content\Images\HotelImages\IMG_2691_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2692.png" />
     <Content Include="Content\Images\HotelImages\IMG_2692_small350.png" />
+    <Content Include="Content\Images\HotelImages\IMG_2700.png" />
     <Content Include="Content\Images\HotelImages\IMG_2700_small350.png" />
     <Content Include="Content\Images\keys.png" />
     <Content Include="Content\Images\left.png" />
@@ -1981,6 +1995,7 @@
     <Content Include="Library\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Library\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Library\ckeditor\skins\moono\readme.md" />
+    <None Include="Properties\PublishProfiles\hotel.pubxml" />
     <None Include="Properties\PublishProfiles\xaviadecor.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\common\html5.js" />
@@ -2003,10 +2018,6 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\img\advertisement.png" />
-    <Content Include="Content\img\contact-form.png" />
-    <Content Include="Content\img\form-contact-shadow.png" />
-    <Content Include="Content\img\sprite.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
