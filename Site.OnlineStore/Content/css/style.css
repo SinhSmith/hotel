@@ -264,7 +264,7 @@ nav a:focus {
     background-size: cover;
 }
 .banner-main {
-    width: 50%;
+    width: 65%;
     margin: 14em auto 0em;
     background:rgba(0, 0, 0, 0.74);
     padding: 2em 2em;
@@ -279,7 +279,7 @@ nav a:focus {
     font-size: 1.4em;
     color: #fff;
     margin: 0.6em 0em;
-    letter-spacing: 7px;
+    letter-spacing: 3px;
 }
 .banner-main p {
     font-size: 1em;
